@@ -55,4 +55,5 @@ cd BooksManager.API/
 dotnet add package Microsoft.EntityFrameworkCore.Design
 dotnet ef database update -- --environment Development
 docker run -d -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=Pass@12345' -p 1433:1433 --name sqlserver -d mcr.microsoft.com/mssql/server:2019-latest
+http://localhost:5299/swagger/index.html
 ```
