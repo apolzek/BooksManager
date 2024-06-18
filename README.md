@@ -28,8 +28,9 @@ A API conta com as seguintes **funcionalidades**:
   
 # Endpoints
 
-![image](https://github.com/CaioTito/BooksManager/assets/47333681/cc886ab8-8e8a-455a-b68d-d98ee1ec1ed8)
+http://localhost:5299/swagger/index.html
 
+![image](https://github.com/CaioTito/BooksManager/assets/47333681/cc886ab8-8e8a-455a-b68d-d98ee1ec1ed8)
 
 ## Como executar o projeto
 Para executar o projeto, siga as seguintes etapas:
@@ -45,4 +46,13 @@ Para executar o projeto, siga as seguintes etapas:
 ## Testes unitários
 
 ![image](https://github.com/CaioTito/BooksManager/assets/47333681/08f6a5fd-c958-4b37-8710-e2615360a2fb)
+## local
 
+```
+export PATH="$PATH:/home/apolzek/.dotnet/tools"
+dotnet ef database update
+cd BooksManager.API/
+dotnet add package Microsoft.EntityFrameworkCore.Design
+dotnet ef database update -- --environment Development
+docker run -d -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=Pass@12345' -p 1433:1433 --name sqlserver -d mcr.microsoft.com/mssql/server:2019-latest
+```
